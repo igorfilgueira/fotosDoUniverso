@@ -4,7 +4,7 @@ fetch("https://api.nasa.gov/planetary/apod?api_key=criuVmRtgLcV6BRRaRJCxXb2VsuWb
 })
 .then(function(data){
   // Recupera a referência do container da página
-  var container = document.getElementById("container");
+  var container = document.getElementById("container-fluid");
 
   // Cria um elemento "h1" para exibir o título
   var title = document.createElement("h2");
@@ -23,30 +23,8 @@ fetch("https://api.nasa.gov/planetary/apod?api_key=criuVmRtgLcV6BRRaRJCxXb2VsuWb
 
   // Cria um elemento "p" para exibir a data
   var date = document.createElement("p");
-  date.innerHTML = "Data: " + data.date;
+  date.innerHTML = "Data: " + new Date(data.date).toLocaleDateString('pt-BR');
   container.appendChild(date);
+  
 });
 
-
-
-
-/*
-// Obtenha a referência do botão
-var button = document.getElementById("botao");
-
-// Obtenha a referência da imagem
-var picture = document.getElementById("picture");
-
-// Adicione um evento de clique ao botão
-button.addEventListener("click", function(){
-    // Fazer uma solicitação GET à API da NASA
-    fetch("https://api.nasa.gov/planetary/apod?api_key=criuVmRtgLcV6BRRaRJCxXb2VsuWb5yjqHhMnMVB")
-    .then(function(response){
-        return response.json();
-    })
-    .then(function(data){
-        // Atualize a fonte da imagem com a URL retornada pela API
-        picture.src = data.url;
-    });
-});
-*/

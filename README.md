@@ -3,7 +3,7 @@ Este site utiliza a API APOD (Astronomy Picture of the Day) da NASA para exibir 
 ## Como utilizar
 Para utilizar o site, basta acessar o link que levará diretamente ao site oficial da NASA que disponibiliza a API. Nesse site, você poderá acessar todas as imagens e informações do universo que são atualizadas diariamente.
 
-## RecursosRecursos
+## Recursos
 A API APOD fornece diversas informações sobre cada imagem, incluindo:
 
 - Título da imagem
